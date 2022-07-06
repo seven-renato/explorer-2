@@ -1,0 +1,114 @@
+*{ /* asterisco vai para todos os elementos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*sempre q usar altura e largura, a caixa vai sempre contar o tamanho pela borad se ajustar, calculo do tamanho da caixa*/
+}
+
+html {
+    /* variáveis para que coloque codigos que serão guradados em memória */
+    --bg-color: #EDF2ff;
+    --text-color: #00082f;
+    --primary-color: #4263eb;
+    --primary-color-dark: #364EC7;
+}
+
+.dark-blue{
+    --bg-color: #00082f;
+    --text-color: #ffffff;
+}
+
+.pink-white{
+    --bg-color: #FFF0F6;
+    --text-color: #1F000B;
+    --primary-color: #D6336C;
+    --primary-color-dark: #A61E4D;
+}
+
+.dark-pink{
+    --bg-color: #1f000b;
+    --text-color: #FFFFFF;
+    --primary-color: #D6336C;
+    --primary-color-dark: #A61E4D;
+}
+
+.yellow{
+    --bg-color: #FAF3E3;
+    --primary-color: #FF9F29;
+    --primary-color-dark: #c77107;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color); /* aplica pra tordos os textos dentro do body*/
+    font-family: 'Roboto', sans-serif; /* Mais arredondada*/
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    width: 300px; /* sem o parametro de box sizing considera o conteudo apenas como tamanho da vaixa */
+    margin: 60px auto 0px; /* se só tem dois valores, o primeiro referencia em cima e em baixo, e o outro horizontal*/
+} /* 3 argumentos o terceiro refere-se a em baixo*/
+
+img {
+    width: 100%; /* relativo a caixa q está dentro*/
+} 
+img.avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 3.7px;
+    border: var(--primary-color) solid 4px;
+}
+
+h1 {
+    margin-top: 24px;
+    margin-bottom: 8;
+    font-size: 32px;
+}
+
+.username {
+    font-weight: 400;
+    font-family: 'Roboto', monospace;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+    margin: 48px 0;
+}
+
+
+ul li a { /* pegar todas as ul e seus li dentro e todos seuu link(a)*/
+    height: 53px;
+    display:flex; /* destrava as propriedades da caixa */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color); /* hex: 0 - f */
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    margin-bottom: 16px;
+    border-radius: 6px;
+
+    transition: background 400ms;
+}
+
+ul li a:hover {/*pseudo-clas */
+    background: var(--primary-color-dark) ;
+}
+footer {
+    font-weight: 500;
+    font-size: 14px;
+    opacity: 0.6;
+    transition: opacity 400ms;
+}
+
+footer:hover {
+    opacity: 1;
+}
